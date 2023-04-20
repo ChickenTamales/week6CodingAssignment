@@ -20,11 +20,13 @@ public class App {
 		for (int i = 1; i < 26; i++) {
 			Card card1 = player1.flip();
 			Card card2 = player2.flip();
+			System.out.println("Player 1 turn: ");
 			card1.describe();
+			System.out.println("Player 2 turn: ");
 			card2.describe();
-			if(card1 > card2) {
+			if(card1.getValue() > card2.getValue()) {
 	            player1.incrementScore();
-	       } else if(card1 < card2) {
+	       } else if(card1.getValue() < card2.getValue()) {
 	            player2.incrementScore();
 	            }
 		}
