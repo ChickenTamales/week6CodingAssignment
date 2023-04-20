@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Deck {
 
-	List<Card> cards = new ArrayList<Card>();
+	List<Card> deck = new ArrayList<Card>();
 	
 	Deck(){
 		int[] values = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
@@ -15,12 +15,12 @@ public class Deck {
 			int count = 2;//count initialized at 2 
 			for (int value : values) {//each value in the array 'values'
 				Card card = new Card(value, name);//a new card is created with a value, and a name.
-				this.cards.add(card);
+				this.deck.add(card);
 				count++;//move to the next card
 				
-				Deck newDeck = new Deck();
-				newDeck.shuffle();
-				System.out.println("Deck has " + (newDeck.getCards().size() + "cards!"));//"Deck has (number of) cards!"
+//				System.out.println("Deck has " + (deck.getDeck().size() + "cards!"));//"Deck deck = new Deck();
+//				deck.shuffle();
+//				Deck has (number of) cards!"
 			
 				
 				
@@ -30,13 +30,13 @@ public class Deck {
 	
 	
 	public void shuffle() {
-		Collections.shuffle(this.cards);
+		Collections.shuffle(this.deck);
 	}
 	public Card draw() {//doesn't need parameters because we're using the field in the deck class
-		Card card = this.cards.remove(0);//this will take the card out of the deck and in the card variable
+		Card card = this.deck.remove(0);//this will take the card out of the deck and in the card variable
 		return card;
 	}
-	public List<Card> getCards() {
-		return cards;
+	public List<Card> getDeck() {
+		return deck;
 	}
 }
