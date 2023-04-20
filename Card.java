@@ -23,7 +23,7 @@ public class Card {
 		this.name = name;
 	}
 	public void describe() {//will print out the values stored in above fields
-		System.out.println("Card name: " + this.name + "Card value: " + this.value);
+		System.out.println(" Card name: " + this.name + " \n Card value: " + this.value);
 	}
 	public int compareTo(Card card) {
 		return 0;
